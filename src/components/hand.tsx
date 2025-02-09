@@ -1,6 +1,13 @@
 import React from "react";
+import { HandType } from "../interfaces/handType";
 
-export default class Hand extends React.Component {
+interface Props {
+  selectHand: HandType;
+  clickHand: (val: HandType) => void;
+  selectedHand: HandType;
+}
+
+export default class Hand extends React.Component<Props, {}> {
   render() {
     const imgSize = 100;
     const handTypes = ["rock", "scissors", "paper"]
